@@ -47,11 +47,7 @@ Flutter 生命周期指的是应用程序中每个界面或页面的生命周期
 
 - **`didChangeAppLifecycleState()`**：当应用的生命周期发生变化时调用（如切换到后台、恢复到前台）。例如，你可以在这里处理暂停/恢复时的逻辑。
 
-  ```
-  dart
-  
-  
-  复制编辑
+  ```dart
   WidgetsBinding.instance.addObserver(MyObserver());
   
   class MyObserver extends WidgetsBindingObserver {
@@ -65,3 +61,51 @@ Flutter 生命周期指的是应用程序中每个界面或页面的生命周期
     }
   }
   ```
+
+
+
+### GetX 控制器生命周期
+
+`GetX` 控制器生命周期涉及的主要方法有：
+
+- **`onInit()`**：在控制器被初始化时调用。通常用于初始化控制器中的资源或进行一些设置（例如，绑定、网络请求等）。这个方法只会调用一次，类似于 `initState()`。
+
+  ```dart
+  class MyController extends GetxController {
+    @override
+    void onInit() {
+      super.onInit();
+      // 初始化逻辑
+    }
+  }
+  ```
+
+- **`onReady()`**：当控制器完成初始化并且 UI 完成渲染后调用。可以在这里处理一些依赖 UI 完成后的操作（例如，启动动画、监听数据流等）。这个方法是最适合进行 UI 相关操作的地方。
+
+  ```dart
+  class MyController extends GetxController {
+    @override
+    void onReady() {
+      super.onReady();
+      // UI 已加载，可以开始做一些操作，比如动画启动
+    }
+  }
+  ```
+
+- **`onClose()`**：当控制器被销毁时调用。你可以在这里释放资源，例如取消监听器、关闭流、清理定时器等。这个方法类似于 `dispose()`。
+
+  ```dart
+  class MyController extends GetxController {
+    @override
+    void onClose() {
+      super.onClose();
+      // 资源释放，如取消监听、清理控制器等
+    }
+  }
+  ```
+
+- **`onDelete()`**（可选）：这是一个更底层的生命周期方法，在控制器删除时触发，但通常不常用。
+
+
+
+## Flutter多线程
