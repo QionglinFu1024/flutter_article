@@ -2,7 +2,7 @@
 
 [TOC]
 
-##  Flutter 的 Widget 是如何分类的？它们的主要区别是什么？
+##  ✅Flutter 的 Widget 是如何分类的？它们的主要区别是什么？
 
 Flutter 的 Widget 主要分为 **有状态 (StatefulWidget) 和 无状态 (StatelessWidget)** 两类。
 
@@ -18,7 +18,7 @@ Flutter 的 Widget 主要分为 **有状态 (StatefulWidget) 和 无状态 (Stat
 
 
 
-## StatefulWidget 和 StatelessWidget 的核心区别是什么？什么情况下选择 StatefulWidget？
+## ✅StatefulWidget 和 StatelessWidget 的核心区别是什么？什么情况下选择 StatefulWidget？
 
 - **核心区别**：
 
@@ -31,7 +31,7 @@ Flutter 的 Widget 主要分为 **有状态 (StatefulWidget) 和 无状态 (Stat
 
   
 
-## Flutter 中 setState() 的作用是什么？它的执行流程是怎样的？
+## ✅Flutter 中 setState() 的作用是什么？它的执行流程是怎样的？
 
 - `setState()` 作用是**通知 Flutter 重新构建 Widget**，以便 UI 发生变化。
 - `setState()` 触发的是 **局部的 UI 更新**，它会标记对应的 Widget 为脏，并在下一个事件循环中重新执行该 Widget 的 `build()` 方法。
@@ -40,7 +40,7 @@ Flutter 的 Widget 主要分为 **有状态 (StatefulWidget) 和 无状态 (Stat
 
 
 
-## Flutter中的三棵树
+## ✅Flutter中的三棵树
 
 Flutter 中的“三棵树”指的是 **Widget Tree**、**Element Tree** 和 **Render Tree**，这三棵树分别负责不同层面的工作，理解它们之间的关系有助于深入掌握 Flutter 的渲染机制。下面我来简要解释一下它们的作用：
 
@@ -86,7 +86,7 @@ Flutter 中的“三棵树”指的是 **Widget Tree**、**Element Tree** 和 **
 
 
 
-## Flutter 是如何实现异步编程的？Future、Stream、async/await 之间有什么区别？
+## ✅Flutter 是如何实现异步编程的？Future、Stream、async/await 之间有什么区别？
 
 Flutter 的异步编程是通过 **Future** 和 **Stream** 来实现的，结合 **async** 和 **await** 关键字使得异步代码更加直观。这里简要总结一下它们的区别和作用。
 
@@ -163,7 +163,7 @@ void main() async {
 
 
 
-## Flutter 中的 `BuildContext` 是什么？它的作用是什么？
+## ✅Flutter 中的 `BuildContext` 是什么？它的作用是什么？
 
 - `BuildContext` 代表 Widget 在 Widget 树中的位置，提供访问 `Theme`、`Navigator`、`MediaQuery` 等功能的接口。
 
@@ -171,7 +171,7 @@ void main() async {
 
   
 
-## flutter生命周期
+## ✅flutter生命周期
 
 Flutter 生命周期指的是应用程序中每个界面或页面的生命周期。具体来说，就是当页面从创建、渲染、暂停、恢复、销毁等一系列状态变化的过程。在 Flutter 中，`StatefulWidget` 和 `StatelessWidget` 是两种常见的组件类型，它们的生命周期有所不同。
 
@@ -261,7 +261,7 @@ Flutter 生命周期指的是应用程序中每个界面或页面的生命周期
 
 
 
-## Flutter多线程和Dart的Isolate
+## ✅Flutter多线程和Dart的Isolate
 
 在 Flutter 中，虽然 Dart 本身是单线程的，但通过 **Isolate** 和一些特定的机制，你可以实现类似多线程的并发处理。Flutter 通过将 UI 和业务逻辑分离，充分利用设备的多核处理能力，优化应用性能。
 
@@ -387,5 +387,3 @@ Flutter 的多线程实现主要是通过以下方式来优化性能，提升应
 - **异步编程和 Isolate**：你可以通过异步编程模型和 `Isolate` 来在后台处理 CPU 密集型任务，保持 UI 流畅。
 
 
-
-## 
